@@ -16,6 +16,7 @@ pipeline{
                 }
                 stage('scan') {
                     steps {
+                        sh "which java"
                         synopsys_detect '--detect.signature.scanner.host.url=https://sales.blackducksoftware.com --detect.signature.scanner.dry.run=true --blackduck.offline.mode=true'
 
                     }
